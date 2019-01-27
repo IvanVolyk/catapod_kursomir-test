@@ -1,35 +1,41 @@
 ﻿* {
 	margin: 0;
 	padding: 0;
-	font-family: 'montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
-header {
+.kursomir__header {
   min-height: 80px;
 }
 
-.logo {
-  float: left;
-  width: 158px;
-    height: 42px;
-    margin-top: 24px;
-    margin-left: 20em;
-}
-
 .menu {
-  float: right;
-  line-height: 85px;
-  margin-right: 15em;
+    width: 960px;
+    min-height: 80px;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    left: 50%;
 }
 
-.menu a {
-  color: #333333;
+.menu_link {
   text-decoration: none;
-  padding: 0 30px;
+  color: #333333;
+  top: 4px;
+  left: 24em;
+  position: relative;
+  padding: 0 10px;
 }
 
-.menu a:hover {
+.menu_link:hover {
   color: #ec4e42;
+}
+
+.menu_logo {
+  position: relative;
+  width: 158px;
+  height: 42px;
+  right: 35%;
+  top: 13px;
 }
 
 .slider {
@@ -48,51 +54,51 @@ header {
   top: -80px;
 }
 
-h2 {
+.subheader {
   position: relative;
-  left: 4em;
+  left: 65px;
   top: 45px;
   font-size: 30px;
   font-weight: bold;
 }
 
-.lider {
+.hero {
   color: #ec4e42;
 }
 
-.lider_h, .lay {
+.hero_h, .hero_link {
   font-size: 35px;
   text-decoration: none;
   color: #fff;
 }
 
-.layer1 {
+.bg-layer--1 {
   min-height: 300px;
-  width: 47%;
+  width: 862px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -15%);
+  transform: translate(-48%, -15%);
   position: relative;
   background-image: url(../img/13.jpg);
   background-size: cover;
   background-position: center center;
 }
 
-.layer2 {
+.bg-layer--2 {
     position: relative;
     color: white;
-    top: 75px;
-    left: 60px;
+    top: 45px;
+    left: 25px;
 }
 
-.lightbox-gallery {
+.education-gallery {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  width: 50%;
-  left: 25%;
+  width: 960px;
+  left: 13em;
   bottom: 38px;
 }
 
@@ -102,52 +108,57 @@ h2 {
   position: relative;
   top: 8px;
   color: #ec4e42;
+  left: 25px;
+  font-weight: 200;
 }
 
 .subject_p {
   font-size: 14px;
-  left: 8px;
   position: relative;
   top: 8px;
   color: #000;
-  font-weight: bold;
+  font-weight: 600;
+  left: 25px;
+  width: 257px;
 }
 
 .subject_p, .subj_ap {
   text-decoration: none;
 }
 
-.lightbox-gallery div > img {
+.education-gallery .education_col > img {
   display: block;
-  width: 190px;
-  height: 150px;
+  width: 264px;
+  height: 170px;
 }
 
-.lightbox-gallery div {
+.education-gallery .education_col {
+  position: relative;
   margin: 10px 16px;
-  flex-basis: 190px;
+  flex-basis: 264px;
   cursor: pointer;
   box-shadow: 
       0 1px 3px rgba(0,0,0, 0.12),
       0 1px 2px rgba(0,0,0, 0.24); 
 }
 
-.lightbox-gallery div:hover {
+.education-gallery .education_col:hover {
+  bottom: 5px;
     box-shadow: 
       0 2px 10px rgba(0,0,0, 0.12),
       0 2px 8px rgba(0,0,0, 0.24); 
 }
 
-.lightbox-gallery div p {
+.education-gallery .education_col p {
   margin-bottom: 20px;
 }
 
-.lightbox-gallery div p a {
+.education-gallery .education_col p a {
   text-decoration: none;
 
 }
 
-button {
+.all_kurs {
   position: relative;
   top: 50%;
   left: 50%;
@@ -159,6 +170,13 @@ button {
   color: #fff;
   font-weight: bold;
   cursor: pointer;
+}
+
+.all_kurs:hover {
+  bottom: 5px;
+   box-shadow: 
+     0 2px 10px rgba(0,0,0, 0.12),
+     0 2px 8px rgba(0,0,0, 0.24);
 }
 
 .news {
@@ -177,12 +195,13 @@ button {
   flex-direction: row;
   justify-content: center;
   margin-bottom: 10em;
+  width: 80em;
 }
 
 .new_li {
   height: 140px;
   width: 224px;
-  margin-left: 4em;
+  margin-left: 6em;
 }
 
 .news_item {
@@ -194,14 +213,17 @@ button {
   color: #ec4e42;
 }
 
-.n_data {
+.news_data {
   margin-bottom: 1px;
   color: #636e72;
   font-size: 12px;
+  font-style: normal;
 }
 
 .news_p {
   color: #636e72;
+  font-weight: 100;
+  font-stretch: ultra-condensed;
 }
 
 h4 {
@@ -224,10 +246,13 @@ h4 {
   flex-direction: row;
   justify-content: center;
   margin-bottom: 18px;
+  width: 960px;
+  position: relative;
+  left: 5em;
 }
 
 .partners_item {
-  margin-left: 18px;
+  margin-left: 4em;
 }
 
 .partner {
@@ -237,19 +262,8 @@ h4 {
 
 .h_item {
   position: relative;
-  left: 30%;
+  left: 14em;
   margin-bottom: 2em;
   margin-top: 2em;
-}
-
-@media only screen and (max-width: 480px) {
-  .lightbox-gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .lightbox > div {
-    margin-bottom: 10px;
-  }
 }
 
