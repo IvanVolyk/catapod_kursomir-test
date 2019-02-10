@@ -1,45 +1,14 @@
 ﻿* {
 	margin: 0;
-	padding: 0;
-	font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.kursomir__header {
-  min-height: 80px;
-}
-
-.menu {
-    width: 960px;
-    min-height: 80px;
-    margin: 0 auto;
-}
-
-.menu__link {
-  text-decoration: none;
-  color: #333333;
-  top: 4px;
-  left: 16em;
-  position: relative;
-  padding: 0 23px;
+html, body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-}
-
-.menu__link:first-of-type {
-  left: 24em;
-  padding: 0 10px;
-}
-
-.menu__link:hover {
-  color: #ec4e42;
-}
-
-.menu__logo {
-  position: relative;
-  width: 158px;
-  height: 42px;
-  right: 35%;
-  top: 13px;
 }
 
 .slider {
@@ -49,122 +18,144 @@
   background-position: 50% 38%;
 }
 
-.content {
+.kursomir__header {
   width: 960px;
+  margin: 0 auto;
+}
+
+.kursomir__header:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.logo__link {
+  float: left;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.logo {
+  height: 42px;
+  margin: 21px 0;
+}
+
+.menu {
+    float: right;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #333333;
+  padding: 2em 1.5em;
+  display: inline-block;
+}
+
+.menu__link:hover {
+  color: #ec4e42;
+}
+
+.content {
+  width: 1024px;
   min-height: 80px;
   margin: 0 auto;
+  padding: 0 2.5em;
   background: #fff;
   position: relative;
-  top: -80px;
+  top: -5em;
 }
 
-.subheader {
-  position: relative;
-  left: 65px;
-  top: 45px;
-  font-size: 30px;
+.content__header {
+  font-size: 2em;
+  padding: 3rem 0 2.625rem;
   font-weight: bold;
-  font-family: 'Gotham Pro';
+  color: #333;
+  line-height: 1;
 }
 
-.hero-title {
+.course-hero {
+  min-height: 320px;
+  width: 100%;
+  background-image: url(../img/13.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 4em 2em;
+}
+
+.course-hero__category {
   color: #ec4e42;
   font-size: 14px;
   font-weight: 500;
 }
 
-.hero-header, .hero-link {
+.course-hero__link {
   text-decoration: none;
   color: #fff;
-  font-size: 30px;
+  font-size: 2em;
   font-weight: bold;
-  font-family: 'Gotham Pro';
+  line-height: 1;
 }
 
-.priority-section {
-  min-height: 300px;
-  width: 826px;
-  position: relative;
-  background-image: url(../img/13.jpg);
-  background-size: cover;
-  background-position: center center;
-  margin: -3em auto 0;
-  padding: 1em;
+.course-hero__description {
+  width: 450px;
+  margin-top: 1em;
+  color: #fff;
 }
 
-.priority-section__hero {
-    position: relative;
-    color: white;
-    top: 45px;
-    left: 25px;
-}
-
-.education-gallery {
+.course__container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.course {
   position: relative;
-  width: 960px;
-  margin: -3em auto 0; 
-  padding: 1em;
-  top: 3em;
-}
-
-.subject-header {
-  left: 8px;
-  position: relative;
-  top: 8px;
-  color: #ec4e42;
-  left: 25px;
-  font-size: 14px;
-  font-weight: normal;
-}
-
-.subject-content {
-  position: relative;
-  top: 8px;
-  color: #000;
-  left: 25px;
-  width: 257px;
-  font-size: 14px;
-  font-family: 'Gotham Pro';
-}
-
-.subject-content, .subject-link {
-  text-decoration: none;
-}
-
-.education-gallery .education__col > img {
-  display: block;
-  width: 264px;
-  height: 170px;
-}
-
-.education-gallery .education__col {
-  position: relative;
-  margin: 10px 16px;
-  flex-basis: 264px;
+  width: 300px;
   cursor: pointer;
   box-shadow: 
       0 1px 3px rgba(0,0,0, 0.12),
-      0 1px 2px rgba(0,0,0, 0.24); 
+      0 1px 2px rgba(0,0,0, 0.24);
+  transition: .5s all;
+  margin-top: 1em;
 }
 
-.education-gallery .education__col:hover {
-  bottom: 5px;
-    box-shadow: 
-      0 2px 10px rgba(0,0,0, 0.12),
-      0 2px 8px rgba(0,0,0, 0.24); 
+.course:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 2px 10px rgba(0,0,0, 0.12),
+    0 2px 8px rgba(0,0,0, 0.24); 
 }
 
-.education-gallery .education__col p {
+.course__img {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+.course__details {
+  padding: 1em;
+}
+
+.course__title {
   margin-bottom: 20px;
 }
 
-.education-gallery .education__col p a {
+.course__link {
   text-decoration: none;
+}
 
+.course__category {
+  color: #ec4e42;
+  font-size: 0.875em;
+}
+
+.course__title {
+  color: #000;
+  font-weight: bold;
+  color: #333;
 }
 
 .btn__all-kurs {
@@ -298,4 +289,3 @@ h4 {
   font-size: 20px;
   font-family: 'Gotham Pro';
 }
-
